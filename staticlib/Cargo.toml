@@ -1,0 +1,20 @@
+[package]
+authors = ["iximeow <git@iximeow.net>"]
+description = "static library interfaces to memory-mapped registers for amd64"
+edition = "2018"
+keywords = ["amd64", "emulation", "disassembly"]
+license = "0BSD"
+name = "regmap-static"
+readme = "../README.md"
+repository = "https://www.github.com/iximeow/regmap/"
+version = "0.1.0"
+
+[lib]
+name = "regmap"
+path = "src/staticlib.rs"
+crate_type = ["staticlib"]
+
+[dependencies]
+yaxpeax-x86 = { version = "0.1.5", default-features = false }
+yaxpeax-arch = { version = "0.0.4", default-features = false, features = [] }
+libc = { version = "*", default-features = false, features = [] }

@@ -1,0 +1,41 @@
+[package]
+authors = ["iximeow <git@iximeow.net>"]
+description = "memory-mapped registers for amd64"
+edition = "2018"
+keywords = ["amd64", "emulation", "disassembly"]
+license = "0BSD"
+name = "regmap"
+readme = "README.md"
+repository = "https://www.github.com/iximeow/regmap/"
+version = "0.1.0"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[lib]
+name = "regmap"
+path = "src/lib.rs"
+crate_type = ["rlib"]
+
+[workspace]
+members = [
+  "staticlib",
+]
+
+[dependencies]
+yaxpeax-x86 = { version = "0.1.5", default-features = false }
+yaxpeax-arch = { version = "0.0.4", default-features = false, features = [] }
+libc = { version = "*", default-features = false, features = [] }
+
+[[example]]
+name = "hello_world"
+path = "examples/hello_world.rs"
+
+[features]
+default = ["std"]
+
+# have to conditionally include panic_handler for no_std builds
+std = []
