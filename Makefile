@@ -1,4 +1,4 @@
-build: example.s
+build: examples/example.s
 	cargo build --release --workspace
 	as examples/example.s -o target/example.o
 	gcc target/example.o target/release/libregmap.a -o asm_example

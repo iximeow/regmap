@@ -17,5 +17,7 @@ fn lol() {
 }
 
 fn lol_args(a1: u64, a2: u64) {
-    panic!("a1: {}, a2: {}", a1, a2);
+    println!("a1: {}, a2: {}", a1, a2);
+    println!("goodbye!");
+    std::process::exit(0);
 }
