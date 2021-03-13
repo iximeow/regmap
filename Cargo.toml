@@ -28,7 +28,7 @@ members = [
 [dependencies]
 yaxpeax-x86 = { version = "0.1.5", default-features = false }
 yaxpeax-arch = { version = "0.0.4", default-features = false, features = [] }
-libc = { version = "*", default-features = false, features = [] }
+libc = { version = "0.2.0", default-features = false, features = [] }
 
 [[example]]
 name = "hello_world"
