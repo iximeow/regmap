@@ -4,7 +4,7 @@
 //! `fxsave` and `rep movs`) will have unpredictable results; likely an application crash.
 //!
 //! the vehicle is shaped for GPR arithmetic, bitwise operation, and control flow. please keep your
-//! hands and feet inside the vehicle at all times and everything will be fine.
+//! hands and paws inside the vehicle at all times and everything will be fine.
 
 use core::ffi::c_void;
 use core::ops::{BitAnd, BitOr};
